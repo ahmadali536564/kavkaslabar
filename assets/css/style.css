@@ -1107,7 +1107,7 @@ input[type=color] {
   position: relative;
 }
 .main-menu ul > li.has-dropdown a::after {
-  content: "+";
+  content: "";
   transform: translateY();
   right: 0;
 }
@@ -1512,7 +1512,7 @@ input[type=color] {
   margin-bottom: 0;
 }
 .header-left-menu ul > li.has-dropdown > a::after {
-  content: "+";
+  content: "";
   right: 0;
 }
 .header-left-menu ul > li a {
@@ -1966,7 +1966,7 @@ input[type=color] {
   overflow: hidden;
 }
 
-.tp-home-one {
+.tp-الصفحة الرئيسة-one {
   position: absolute;
   left: 0;
   right: 0;
@@ -1987,11 +1987,11 @@ input[type=color] {
   box-shadow: rgba(100, 100, 111, 0.1) 1px 5px 20px 1px;
 }
 
-.tp-home-one.header-sticky {
+.tp-الصفحة الرئيسة-one.header-sticky {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.tp-home-one.header-sticky .main-menu nav > ul > li > a {
+.tp-الصفحة الرئيسة-one.header-sticky .main-menu nav > ul > li > a {
   padding: 40px 0;
 }
 
@@ -2418,14 +2418,14 @@ input[type=color] {
   }
 }
 
-.tp-home-lg-banner {
+.tp-الصفحة الرئيسة-lg-banner {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 5;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tp-home-lg-banner {
+  .tp-الصفحة الرئيسة-lg-banner {
     position: static;
   }
 }

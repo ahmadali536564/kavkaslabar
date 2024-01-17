@@ -459,6 +459,7 @@
 	left: 0;
 }
 .tpsideinfo__close {
+	border-radius: 8px;
 	right: auto;
 	left: 30px;
 	top: 30px;

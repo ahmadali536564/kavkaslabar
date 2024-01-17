@@ -59,7 +59,7 @@
 	$('#mobile-menu').meanmenu({
 		meanMenuContainer: '.mobile-menu',
 		meanScreenWidth: "1199",
-		meanExpand: ['<i class="fal fa-plus"></i>'],
+		meanExpand: ['<i class="fal fa-arrow-down"></i>'],
 	});
 
 	////////////////////////////////////////////////////

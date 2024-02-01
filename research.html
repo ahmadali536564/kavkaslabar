@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>KAVKAS - Laboratory & Science Research</title>
+      <title>KAVKAS - Laboratory & Science العروض</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,6 +24,123 @@
       <link rel="stylesheet" href="assets/css/meanmenu.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="rtl.css">
+      <script>
+         // Function to fetch image filenames from the server
+         function fetchImageFiles() {
+             fetch('https://kavkasgroup.com/get_image_files.php')
+             .then(response => response.json())
+             .then(data => {
+                 // Call function to generate gallery using fetched filenames
+                 generateGallery(data);
+             })
+             .catch(error => console.error('Error:', error));
+         }
+         
+         // Function to generate gallery using image filenames
+         function generateGallery(imageFiles) {
+             var galleryContainer = document.getElementById('gallery');
+             galleryContainer.innerHTML = ''; // Clear previous content
+         
+             // Extract values from the object into an array
+             var imageFileArray = Object.values(imageFiles);
+         
+             imageFileArray.forEach(function(imageFile, index) {
+                 // Create the HTML structure for each image
+                 var researchItemCol = document.createElement('div');
+                 researchItemCol.className = 'col-lg-4 col-md-6';
+         
+                 var researchItem = document.createElement('div');
+                 researchItem.className = 'research-item tp-pink mb-50 wow fadeInUp';
+                 researchItem.setAttribute('data-wow-delay', '.4s');
+                 researchItem.setAttribute('style', 'visibility: visible; animation-delay: ' + (0.4 + index * 0.1) + 's; animation-name: fadeInUp;');
+         
+                 var researchItemThum = document.createElement('div');
+                 researchItemThum.className = 'research-item__thum fix mb-20';
+         
+                 var imageElement = document.createElement('img');
+                 imageElement.src = 'assets/img/LaboratoryPackages/' + imageFile;
+                 imageElement.alt = 'Image ' + (index + 1);
+                 imageElement.style.width = '26rem';
+                 imageElement.style.borderRadius = '10px';
+
+
+                 researchItemThum.appendChild(imageElement);
+         
+                 var researchItemContent = document.createElement('div');
+                 researchItemContent.className = 'research-item__content';
+         
+                 var spanElement = document.createElement('span');
+                 spanElement.textContent = '';
+         
+                 var h4Element = document.createElement('h4');
+                 h4Element.className = 'research-item__title mb-20';
+                 var aElement = document.createElement('a');
+                 aElement.href = 'services-details.html';
+                 aElement.textContent = '';
+                 h4Element.appendChild(aElement);
+         
+                 var pElement = document.createElement('p');
+                 pElement.textContent = '';
+         
+                 var aMoreElement = document.createElement('a');
+                 aMoreElement.href = '';
+                 aMoreElement.className = '';
+                 aMoreElement.textContent = '';
+         
+                 researchItemContent.appendChild(spanElement);
+                 researchItemContent.appendChild(h4Element);
+                 researchItemContent.appendChild(pElement);
+                 researchItemContent.appendChild(aMoreElement);
+         
+                 researchItem.appendChild(researchItemThum);
+                 researchItem.appendChild(researchItemContent);
+         
+                 researchItemCol.appendChild(researchItem);
+         
+                 // Append the HTML structure to the gallery container
+                 galleryContainer.appendChild(researchItemCol);
+             });
+         }
+         
+         // Call fetchImageFiles function when the page is loaded
+         window.onload = function() {
+             fetchImageFiles();
+         };
+         </script>
+               <!-- <script>
+                  // Function to fetch image filenames from the server
+                  function fetchImageFiles() {
+                      fetch('https://kavkasgroup.com/get_image_files.php')
+                      .then(response => response.json())
+                      .then(data => {
+                          // Call function to generate gallery using fetched filenames
+                          generateGallery(data);
+                      })
+                      .catch(error => console.error('Error:', error));
+                  }
+                  
+                  // Function to generate gallery using image filenames
+                  function generateGallery(imageFiles) {
+                      var gallery = document.getElementById('gallery');
+                      gallery.innerHTML = ''; // Clear previous content
+                  
+                      // Extract values from the object into an array
+                      var imageFileArray = Object.values(imageFiles);
+                  
+                      imageFileArray.forEach(function(imageFile, index) {
+                          var imageElement = document.createElement('img');
+                          imageElement.src = 'assets/img/LaboratoryPackages/' + imageFile;
+                          imageElement.alt = 'Image ' + (index + 1);
+                          gallery.appendChild(imageElement);
+                      });
+                  }
+                  
+                  // Call fetchImageFiles function when the page is loaded
+                  window.onload = function() {
+                      fetchImageFiles();
+                  };
+                  
+                           </script> -->
    </head>
    <body>
       <!--[if lte IE 9]>
@@ -60,7 +177,7 @@
                      </div>
                      <div class="col-lg-8">
                         <div class="header-time">
-                           <span><i class="fa-light fa-clock-ten"></i> السبت - الأحد 10:00 ص - 02:00 م</span>
+                           <span><i class="fa-light fa-clock-ten"></i> السبت - الخميس 8:00 ص - 06:00 م</span>
                            
                         </div>
                      </div>
@@ -82,12 +199,11 @@
                                        <li><a href="team-02.html">Team 02</a></li>
                                        <li><a href="team-details.html">Team Details</a></li>
                                        <li><a href="portfolio-details.html">Project Details</a></li>
-                                       <li><a href="priceing-plan.html">Pricing Plan</a></li>
+                                      
                                        <li><a href="shop.html">Shop</a></li>
-                                       <li><a href="shop-details.html">Product Details</a></li>
-                                       <li><a href="cart.html">Cart</a></li>
-                                       <li><a href="checkout.html">Checkout</a></li>
-                                       <li><a href="faq.html">FAQ's</a></li>
+                                       <li><a href="shop-details.html">وسائل التواصل الاجتماعي</a></li>
+
+                                       <li><a href="faq.html">أسئلة شائعة</a></li>
                                     </ul>
                                  </li>
                                  <li class="has-dropdown"><a href="services-01.html">الخدمات</a>
@@ -95,10 +211,10 @@
                                        <li><a href="services-01.html">الخدمات</a></li>
                                       
                                        
-                                       <li><a href="services-details.html">تفاصيل الخدمات</a></li>
+                                       <li><a href="services-details.html">عن المختبر</a></li>
                                     </ul>
                                  </li>
-                                 <li><a href="research.html">Research</a></li>
+                                 <li><a href="research.html">العروض</a></li>
                                  <li class="has-dropdown"><a href="blog.html">Blog</a>
                                     <ul class="sub-menu">
                                        <li><a href="blog.html">Blog</a></li>
@@ -106,7 +222,7 @@
                                     </ul>
                                  </li>                            
 
-                                 <li><a href="https://ahmadali536564.github.io/kavkaslabEn/">العرض باللغة الإنجليزية </a></li
+                                 <li><a >العرض باللغة الإنجليزية </a></li>
                               </ul>
                            </nav>
                         </div>
@@ -200,12 +316,11 @@
                <div class="row align-items-center">
                   <div class="col-lg-6 col-md-6 col-12">
                      <div class="tp-breadcrumb">
-                        <h2 class="tp-breadcrumb__title">Research</h2>
+                        <h2 class="tp-breadcrumb__title">العروض</h2>
                      </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
                      <div class="tp-breadcrumb__link d-flex">
-                        <span>KAVKAS : <a href="research.html"> Project</a></span>
                      </div>
                   </div>
                </div>
@@ -215,128 +330,13 @@
 
          <!-- research-area -->
          <section class="research-area pt-130 pb-130">
+ 
             <div class="container">
-               <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item mb-50 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-01.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Oncology</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Catalysis Processes</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-pink mb-50 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-02.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Pathology</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Organic Synthesis</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-green mb-50 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-03.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Biosafety, Incubator</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Hemoglobin Test</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-sky mb-50 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-04.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Hemoglobin</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Surface Cleaning</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-green mb-50 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-05.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Oncology</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Hemoglobin Test</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item mb-50 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-06.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Incubator</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Polymer Science</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-pink mb-50 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-07.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Hemoglobin</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Cancer Cell Biology</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>                  
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-sky mb-50 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-08.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Hemoglobin</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">DNA Vaccines</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                     <div class="research-item tp-green mb-50 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="research-item__thum fix mb-20">
-                           <img src="assets/img/research/research-thumb-09.jpg" alt="research-thumb">
-                        </div>
-                        <div class="research-item__content">
-                           <span>Hemoglobin</span>
-                           <h4 class="research-item__title mb-20"><a href="services-details.html">Hemoglobin Test</a></h4>
-                           <p>Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla.Nam eget dui vel quam</p>
-                           <a href="services-03.html" class="research-item__btn">Read mORe</a>
-                        </div>
-                     </div>
-                  </div>
+               <div id="gallery" class="row">
+                  <!-- Images will be added here dynamically -->
+              </div>
 
-               </div>
-               <div class="row">
+               <!-- <div class="row">
                   <div class="col-12">
                      <div class="basic-pagination text-center mt-30">
                         <nav>
@@ -367,7 +367,7 @@
                         </nav>
                      </div>
                   </div>
-               </div>
+               </div> -->
             </div>
          </section>
          <!-- research-area-end -->
@@ -410,7 +410,7 @@
                               <span class="tp-footer-widget__sub-title mb-10">ساعات العمل</span>
                               <div class="tp-footer-widget__list">
                                  <ul>
-                                    <li>ساعات العمل: 9 صباحًا - 6 مساءً</li>
+                                    <li>ساعات العمل: 8 صباحًا - 6 مساءً</li>
                                     <li>السبت -الخميس</li>
                                  </ul>
                               </div>
@@ -445,7 +445,7 @@
                                   <li>الأردن - عمان  - البيادر - مقابل ضراغمة - فوق محمص الضياء - الطابق الأول - عيادة رقم ٥ </li>
                                  <li><a href="tel:(+880)15569569365">0791221819</a></li>
                                  <li><a href="mailto:Kavkas.mountain@gmail.com">Kavkas.mountain@gmail.com</a></li>
-                                 <li>ساعات العمل: 9 صباحًا - 6 مساءً</li>
+                                 <li>ساعات العمل: 8 صباحًا - 6 مساءً</li>
                                  <li>السبت -الخميس</li>
                               </ul>
                            </div>
@@ -466,15 +466,15 @@
                   <div class="row">
                      <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget__copyright copyright-white">
-                           <span> © Copyright ©2024 <a href="index.html">KAVKAS Grupe</a>. <i>All Rights Reserved Copyright</i></span>
+                        <span> © حقوق الطبع والنشر © 2024 <a href="index.html">KAVKAS Grupe</a>. <i>جميع الحقوق محفوظة حقوق الطبع والنشر</i></span>
                         </div>
                      </div> 
                      <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget__copyright-info info-direction">
                            <ul class="d-flex align-items-center">
-                              <li><a href="#">Terms and conditions</a></li>
+                              <!-- <li><a href="#">Terms and conditions</a></li>
                               <li><a href="#">Privacy policy</a></li>
-                              <li><a href="#">Pricing</a></li>
+                              <li><a href="#">Pricing</a></li> -->
                            </ul>
                         </div>
                      </div>

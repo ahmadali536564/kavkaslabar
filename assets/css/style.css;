@@ -693,7 +693,8 @@ input[type=color] {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(23, 17, 81, 0.7);
+  background: rgb(50,72,186);
+  background: linear-gradient(174deg, rgba(50,72,186,1) 28%, rgba(50,67,189,1) 29%, rgba(36,112,206,1) 47%, rgba(32,122,211,1) 52%, rgba(26,138,219,1) 60%, rgba(14,173,236,1) 71%, rgba(87,162,186,1) 99%, rgba(45,87,193,1) 100%, rgba(47,67,175,1) 100%, rgba(0,212,255,1) 100%);
   z-index: -1;
 }
 

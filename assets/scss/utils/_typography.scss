@@ -1,14 +1,16 @@
 
 // font url
 
-$font-url: 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Days+One&display=swap';
+$font-url: 'https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap';
+
+
 
 // font family
 $font-family: (
     ff: (
-        body: "'Archivo', sans-serif",
-        heading: "'Days One', sans-serif",
-        p: "'Archivo', sans-serif",
+        body: "'Noto Kufi Arabic', 'Archivo', sans-serif",
+        heading: "''Noto Kufi Arabic', Days One', sans-serif",
+        p: "''Noto Kufi Arabic', Archivo', sans-serif",
         fontawesome: '"Font Awesome 6 Pro"',
     )
 );

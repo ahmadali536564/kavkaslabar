@@ -50,9 +50,9 @@
   @font family declaration
   */
 
-  --tp-ff-body: 'Noto Kufi Arabic', sans-serif;
-  --tp-ff-heading: 'Noto Kufi Arabic', sans-serif;
-  --tp-ff-p: 'Noto Kufi Arabic', sans-serif;
+  --tp-ff-body: 'Noto Kufi Arabic', sans-serif  !important;
+  --tp-ff-heading: 'Noto Kufi Arabic', sans-serif  !important;
+  --tp-ff-p: 'Noto Kufi Arabic', sans-serif  !important;
   --tp-ff-fontawesome: "Font Awesome 6 Pro";
   /**
   @color declaration

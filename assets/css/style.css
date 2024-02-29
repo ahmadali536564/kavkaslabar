@@ -40,16 +40,11 @@
 /*  01. THEME DEFAULT CSS START
 /*----------------------------------------*/
 
- 
-
-
-
 @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap");
 :root {
   /**
   @font family declaration
   */
-
   --tp-ff-body: 'Noto Kufi Arabic', sans-serif  !important;
   --tp-ff-heading: 'Noto Kufi Arabic', sans-serif  !important;
   --tp-ff-p: 'Noto Kufi Arabic', sans-serif  !important;
@@ -497,7 +492,7 @@ input[type=color] {
   margin-right: 4px;
 }
 .tp-cta-btn:hover {
-  color: var(--tp-text-body);
+  color: var(--tp-icon-blue);
 }
 
 .tp-btn,
@@ -1744,7 +1739,6 @@ input[type=color] {
   transform: translateX(0);
 }
 .tpsideinfo__close {
-  border-radius: 8px;
   color: #fff;
   right: 30px;
   font-size: 18px;
@@ -1756,7 +1750,6 @@ input[type=color] {
 }
 @media (max-width: 767px) {
   .tpsideinfo__close {
-    border-radius: 8px;
     width: 30px;
     height: 30px;
   }
@@ -2148,11 +2141,6 @@ input[type=color] {
     display: none;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner__content {
-    padding-top: 80px;
-  }
-}
 @media (max-width: 767px) {
   .banner__content {
     text-align: center;
@@ -2283,23 +2271,6 @@ input[type=color] {
 .banner__shape img {
   border-radius: 0px 0px 362px 362px;
   max-width: 100%;
-  height: 930px;
-  object-fit: cover;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner__shape img {
-    height: 600px;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .banner__shape img {
-    height: 630px;
-  }
-}
-@media only screen and (min-width: 1400px) and (max-width: 1600px) {
-  .banner__shape img {
-    height: 700px;
-  }
 }
 .banner__video-btn {
   position: absolute;
@@ -2432,17 +2403,6 @@ input[type=color] {
   left: 0;
   right: 0;
   z-index: 5;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tp-الصفحة الرئيسة-lg-banner {
-    position: static;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .tp-bt-btn-banner .tp-bt-btn {
-    box-shadow: rgba(100, 100, 111, 0.1) 0.5px 0.5px 5px 0.5px;
-  }
 }
 
 /*----------------------------------------*/
@@ -3294,7 +3254,6 @@ div.tp-srv-link a {
 }
 .about__img img {
   border-radius: 0 0 362px 341px;
-  object-fit: cover;
   max-width: 100%;
 }
 .about__img-shape-text {
@@ -4263,11 +4222,6 @@ div.tp-srv-link a {
   text-align: center;
   border-radius: 50px;
   border: 1px solid var(--tp-grey-1);
-  -webkit-transition: all 0.2s ease-out 0s;
-  -moz-transition: all 0.2s ease-out 0s;
-  -ms-transition: all 0.2s ease-out 0s;
-  -o-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
 }
 .tp-team__social a:hover i {
   border: 1px solid var(--tp-icon-blue);
@@ -5889,9 +5843,8 @@ div.tp-srv-link a {
 .sidebar__search-input-2 input {
   height: 60px;
   width: 100%;
-  padding: 10px 60px 10px 20px;
+  padding: 10px 20px;
   border: none;
-  background-color: var(--tp-grey-1);
 }
 .sidebar__search-input-2 input::placeholder {
   font-weight: 500;
@@ -8294,4 +8247,4 @@ p.checkout-coupon input[type=text]:focus {
   color: var(--tp-text-1);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css;.map */
